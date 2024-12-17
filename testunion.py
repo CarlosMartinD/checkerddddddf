@@ -6,8 +6,8 @@ from concurrent.futures import ThreadPoolExecutor
 # Configuration
 num_files = 200
 file_size = 200_000   # Approximately 200 KB
-source_dir = "/overlayfs"
-target_dir = "/overlayfs"
+source_dir = "/unionfs"
+target_dir = "/unionfs"
 num_workers = 8  # Adjust number of threads here
 
 os.makedirs(source_dir, exist_ok=True)
