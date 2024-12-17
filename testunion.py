@@ -1,4 +1,5 @@
 import os
+import time  # Import the time module to track time
 
 # Configuration
 num_files = 200
@@ -10,6 +11,9 @@ target_dir = "/prueba"
 os.makedirs(source_dir, exist_ok=True)
 os.makedirs(target_dir, exist_ok=True)
 
+# Start tracking time
+start_time = time.time()
+
 print("Creating files...")
 for i in range(num_files):
     file_name = f"file_{i+1:04d}.txt"
@@ -18,4 +22,11 @@ for i in range(num_files):
     with open(file_path, "wb") as f:
         f.write(b'\x00' * file_size)  # Writing 200,000 null bytes
 
+# End tracking time
+end_time = time.time()
+
+# Calculate the elapsed time
+elapsed_time = end_time - start_time
+
 print(f"Created {num_files} files of ~200KB each in '{source_dir}'.")
+print(f"Time taken: {elapsed_time:.2f} seconds.")
