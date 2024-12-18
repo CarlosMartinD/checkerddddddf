@@ -4,7 +4,7 @@ import time  # Import the time module to track time
 # Configuration
 num_files = 200
 file_size = 2_000_000   # 200 KB approximately (200,000 bytes)
-source_dir = "/prueba"
+source_dir = "/unionfs"
 target_dir = "/prueba"
 
 # Create directories if they don't exist
