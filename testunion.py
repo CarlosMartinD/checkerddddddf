@@ -28,5 +28,5 @@ end_time = time.time()
 # Calculate the elapsed time
 elapsed_time = end_time - start_time
 
-print(f"Created {num_files} files of ~200KB each in '{source_dir}'.")
+print(f"Created {num_files} files of ~2MB each in '{source_dir}'.")
 print(f"Time taken: {elapsed_time:.2f} seconds.")
